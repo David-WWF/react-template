@@ -1,12 +1,8 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
+import Dashboard from './layout/Dashboard';
 
 function App() {
   return (
-    <Button variant="contained" color="primary" endIcon={<SendIcon />}>
-      Enviar mensaje
-    </Button>
+    <Dashboard />
   );
 }
 
