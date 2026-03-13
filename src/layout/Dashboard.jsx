@@ -3,6 +3,10 @@ import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, 
 import MenuIcon from '@mui/icons-material/Menu';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import SeccionBotones from '../components/SeccionBotones';
+import SeccionCards from '../components/SeccionCards';
+import SeccionFormularios from '../components/SeccionFormularios';
+import SeccionModales from '../components/SeccionModales';
+import SeccionTablas from '../components/SeccionTablas';
 
 const drawerWidth = 240;
 
@@ -16,7 +20,7 @@ export default function Dashboard(props) {
     };
 
     // 1. Lista de nombres de tus componentes
-    const menuItems = ['Botones', 'Tarjetas', 'Formularios'];
+    const menuItems = ['Botones', 'Tarjetas', 'Formularios', 'Modales', 'Tablas'];
 
     const drawer = (
         <div>
@@ -67,7 +71,13 @@ export default function Dashboard(props) {
                 {/* Aquí llamamos a tu nuevo archivo cuando seleccionas 'Botones' */}
                 {view === 'Botones' && <SeccionBotones />}
 
-                {view === 'Tarjetas' && <Typography>Próximamente: Sección de Cards...</Typography>}
+                {view === 'Tarjetas' && <SeccionCards />}
+
+                {view === 'Formularios' && <SeccionFormularios />}
+
+                {view === 'Modales' && <SeccionModales />}
+
+                {view === 'Tablas' && <SeccionTablas />}
             </Box>
         </Box>
     );
